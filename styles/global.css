@@ -42,7 +42,7 @@
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+    gap: clamp(1.2rem, 2vw, 2rem);
 }
 
 .tone-player .btn-section button {
