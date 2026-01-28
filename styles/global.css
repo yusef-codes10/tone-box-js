@@ -27,3 +27,13 @@
     align-items: center;
 
 }
+
+.tone-player .music-title-section {
+    background-color: seagreen;
+    flex: 1;
+}
+
+.tone-player .progress-bar-section {
+    background-color: sienna;
+    flex: 1;
+}
