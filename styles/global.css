@@ -16,3 +16,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.tone-player {
+    width: min(80%, 500px);
+    height: 100px;
+    background-color: var(--main-color);
+
+}
