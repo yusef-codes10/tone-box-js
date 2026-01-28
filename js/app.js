@@ -17,20 +17,25 @@ btnSection.addEventListener('click', e => {
     console.log('you clicked the btn');
     if(btn.classList.contains('play-btn')) {
         console.log('this is the play btn');
-        playMusic();
-        pause();
+        if (currentMusic.music.paused) {playMusic()}
+        else {pause()}
         return;
     }
 })
 
+const currentMusic = musicList[currentMusicID];
 function pause() {
+    toggleIcon();
+    currentMusic.music.pause();
+}
+
+function toggleIcon() {
     playIcon.classList.toggle('fa-play');
     playIcon.classList.toggle('fa-circle-pause');
-
 }
 
 function playMusic() {
-    const currentMusic = musicList[currentMusicID];
+    toggleIcon();
     currentMusic.music.play();
 }
 
