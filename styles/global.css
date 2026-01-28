@@ -50,11 +50,16 @@
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
 .tone-player .btn-section .play-btn {
     border-radius: 50%;
     background-color: var(--brand-color);
     padding: 2rem;
+}
+
+
+@media (max-width: 575px) {
+
 }
