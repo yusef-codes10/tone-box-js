@@ -6,7 +6,7 @@ const btnSection = document.querySelector('.btn-section');
 const playBtn = document.querySelector('.play-btn');
 const playIcon = playBtn.querySelector('i');
 
-let currentMusic = 0;
+let currentMusicID = 0;
 
 btnSection.addEventListener('click', e => {
     const btn = e.target.closest('.btn');
@@ -17,6 +17,7 @@ btnSection.addEventListener('click', e => {
     console.log('you clicked the btn');
     if(btn.classList.contains('play-btn')) {
         console.log('this is the play btn');
+        playMusic();
         pause();
         return;
     }
@@ -29,7 +30,8 @@ function pause() {
 }
 
 function playMusic() {
-    
+    const currentMusic = musicList[currentMusicID];
+    currentMusic.music.play();
 }
 
 function nextMusic() {
