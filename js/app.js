@@ -15,10 +15,13 @@ btnSection.addEventListener('click', e => {
     console.log('you clicked the btn');
     if(btn.classList.contains('play-btn')) {
         console.log('this is the play btn');
+        pause();
         return;
     }
 })
 
 function pause() {
-    
+    playIcon.classList.toggle('fa-play');
+    playIcon.classList.toggle('fa-circle-pause');
+
 }
