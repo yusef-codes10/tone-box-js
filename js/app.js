@@ -35,9 +35,9 @@ function playMusic() {
 }
 
 function nextMusic() {
-    
+    currentMusicID++; // we have to make sure we are not out of bounds
 }
 
 function prevMusic() {
-    
+    currentMusicID--; // same thing
 }
