@@ -8,5 +8,11 @@ btnSection.addEventListener('click', e => {
     const btn = e.target.closest('.btn');
 
     if(!btn) return; // you did not click on the btn
-    console.log(e.target);
+
+    // we garuntee that the btn has been clicked
+    console.log('you clicked the btn');
+    if(btn.classList.contains('play-btn')) {
+        console.log('this is the play btn');
+        return;
+    }
 })
