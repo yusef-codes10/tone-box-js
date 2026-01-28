@@ -17,3 +17,5 @@ const musicList = [
         music: Audio('/music/orleans-theme.ogg')
     }
 ]
+
+export {musicList};

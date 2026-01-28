@@ -1,10 +1,12 @@
-console.log('app running...');
+import { musicList } from "./audio.js";
 
 // we should use event delegation for the buttons
 // const toneBoxPlayer = document.querySelector();
 const btnSection = document.querySelector('.btn-section');
 const playBtn = document.querySelector('.play-btn');
 const playIcon = playBtn.querySelector('i');
+
+let currentMusic = 0;
 
 btnSection.addEventListener('click', e => {
     const btn = e.target.closest('.btn');
