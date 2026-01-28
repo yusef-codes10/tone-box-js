@@ -3,6 +3,8 @@ console.log('app running...');
 // we should use event delegation for the buttons
 // const toneBoxPlayer = document.querySelector();
 const btnSection = document.querySelector('.btn-section');
+const playBtn = document.querySelector('.play-btn');
+const playIcon = playBtn.querySelector('i');
 
 btnSection.addEventListener('click', e => {
     const btn = e.target.closest('.btn');
@@ -16,3 +18,7 @@ btnSection.addEventListener('click', e => {
         return;
     }
 })
+
+function pause() {
+    
+}
