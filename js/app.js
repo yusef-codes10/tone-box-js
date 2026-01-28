@@ -27,3 +27,15 @@ function pause() {
     playIcon.classList.toggle('fa-circle-pause');
 
 }
+
+function playMusic() {
+    
+}
+
+function nextMusic() {
+    
+}
+
+function prevMusic() {
+    
+}
