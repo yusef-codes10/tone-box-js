@@ -37,3 +37,10 @@
     background-color: sienna;
     flex: 1;
 }
+
+.tone-player .btn-section {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
