@@ -9,3 +9,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.tone-box {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
