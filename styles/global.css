@@ -44,3 +44,17 @@
     justify-content: space-around;
     gap: 2rem;
 }
+
+.tone-player .btn-section button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.tone-player .btn-section .play-btn {
+    border-radius: 50%;
+    background-color: var(--brand-color);
+    padding: 2rem;
+}
