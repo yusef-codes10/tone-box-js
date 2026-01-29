@@ -9,8 +9,10 @@ const playIcon = playBtn.querySelector('i');
 let currentMusicID = 0;
 
 btnSection.addEventListener('click', e => {
-    const btn = e.target.closest('.btn');
+    const currentMusic = musicList[currentMusicID];
 
+    const btn = e.target.closest('.btn');
+    
     if(!btn) return; // you did not click on the btn
 
     // we garuntee that the btn has been clicked
@@ -21,10 +23,15 @@ btnSection.addEventListener('click', e => {
         else {pause()}
         return;
     }
+    if (btn.classList.contains('next-btn')) {
+        console.log('next music has been clicked');
+        nextMusic();
+        return;
+    }
 })
 
-const currentMusic = musicList[currentMusicID];
 function pause() {
+    const currentMusic = musicList[currentMusicID];
     toggleIcon();
     currentMusic.music.pause();
 }
@@ -35,6 +42,7 @@ function toggleIcon() {
 }
 
 function playMusic() {
+    const currentMusic = musicList[currentMusicID];
     toggleIcon();
     currentMusic.music.play();
 }
