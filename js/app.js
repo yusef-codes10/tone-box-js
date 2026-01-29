@@ -1,5 +1,5 @@
 import { musicList } from "./audio.js";
-import { loadImg } from "./disc.js";
+import { loadImg, startAnimation, stopAnimation } from "./disc.js";
 
 // we should use event delegation for the buttons
 // const toneBoxPlayer = document.querySelector();
@@ -39,6 +39,7 @@ function pause() {
     const currentMusic = musicList[currentMusicID];
     toggleIcon();
     currentMusic.music.pause();
+    stopAnimation();
 }
 
 function toggleIcon() {
@@ -50,6 +51,7 @@ function playMusic() {
     const currentMusic = musicList[currentMusicID];
     toggleIcon();
     loadImg();
+    startAnimation();
     currentMusic.music.play();
 }
 
