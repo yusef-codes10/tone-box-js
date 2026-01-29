@@ -40,9 +40,19 @@ function playMusic() {
 }
 
 function nextMusic() {
-    currentMusicID++; // we have to make sure we are not out of bounds
+    // we have to make sure we are not out of bounds
+    if (currentMusicID < musicList.length - 1) {
+        currentMusicID++;
+    } else {
+        currentMusicID = 0;
+    }
 }
 
 function prevMusic() {
-    currentMusicID--; // same thing
+    // same thing
+    if (currentMusicID <= 0) {
+        currentMusicID = musicList.length - 1;
+    } else {
+        currentMusicID--;
+    }
 }
