@@ -4,25 +4,18 @@ import { getCurrentMusicID } from "./app.js";
 // here we are going to load the imgs into disc-container
 const discContainer = document.querySelector('.disc-container');
 
-function loadImg() {
-    // we have to clear the entire state
-    const imgsToDelete = document.querySelectorAll('.to-delete');
-    imgsToDelete.forEach(
-        image => {
-            image.remove();
-        }
-    );
+// create the disc once
+const discImg = document.createElement('img');
+discImg.classList.add('disc');
+discContainer.appendChild(discImg);
 
-    const discImg = document.createElement('img');
-    discImg.classList.add('to-delete');
+function loadImg() {
     discImg.src = musicList[getCurrentMusicID()].img;
     discImg.alt = musicList[getCurrentMusicID()].id;
+}
 
-    // add this class for the animation 
-    discImg.classList.add('disc');
-    discImg.classList.add('playing');
-
-    discContainer.appendChild(discImg);
+function stopAnimation() {
+    
 }
 
 
