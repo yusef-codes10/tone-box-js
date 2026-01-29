@@ -64,6 +64,10 @@
 /* !  the images */
 .disc-container {
     background-color: red;
+    position: absolute;
+    top: 0;
+    right: 35%;
+    width: min(80%, 400px);
 }
 
 .disc-container img {
