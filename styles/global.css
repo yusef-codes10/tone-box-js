@@ -77,6 +77,25 @@
     height: 100%;
     border-radius: 50%; /* makes it look like a disc */
     object-fit: cover;
+
+    /* ! animation is here */
+      /* animation setup */
+    animation: spin 4s linear infinite;
+    animation-play-state: paused; /* IMPORTANT */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* when music is playing */
+.disc.playing {
+  animation-play-state: running;
 }
 
 
