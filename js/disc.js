@@ -14,8 +14,12 @@ function loadImg() {
     discImg.alt = musicList[getCurrentMusicID()].id;
 }
 
+function startAnimation() {
+    discImg.classList.add('playing');
+}
+
 function stopAnimation() {
-    
+    discImg.classList.remove('playing');
 }
 
 
