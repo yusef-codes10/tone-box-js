@@ -18,6 +18,12 @@ const musicList = [
         title: 'Orleans',
         music: new Audio('/music/orleans-theme.ogg'),
         img: '/imgs/3.jpeg'
+    },
+    {
+        id: 'dal',
+        title: 'DAL',
+        music: new Audio('/music/dal.mp3'),
+        img: '/imgs/4.jpeg'
     }
 ]
 
