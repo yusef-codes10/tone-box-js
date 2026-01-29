@@ -18,6 +18,10 @@ function loadImg() {
     discImg.src = musicList[getCurrentMusicID()].img;
     discImg.alt = musicList[getCurrentMusicID()].id;
 
+    // add this class for the animation 
+    discImg.classList.add('disc');
+    discImg.classList.add('playing');
+
     discContainer.appendChild(discImg);
 }
 
