@@ -28,6 +28,10 @@ btnSection.addEventListener('click', e => {
         nextMusic();
         return;
     }
+    if (btn.classList.contains('prev-btn')) {
+        prevMusic();
+        return;
+    }
 })
 
 function pause() {
