@@ -6,11 +6,11 @@ const discContainer = document.querySelector('.disc-container');
 function loadImg() {
     musicList.forEach(
         image => {
-            const img = document.createElement('img');
-            img.src = musicList[image].img;
-            img.alt = musicList[image].id;
+            const discImg = document.createElement('img');
+            discImg.src = image.img;
+            discImg.alt = image.id;
 
-            discContainer.appendChild(img);
+            discContainer.appendChild(discImg);
         }
     )
 }
