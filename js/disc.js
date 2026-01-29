@@ -1,17 +1,25 @@
 import { musicList } from "./audio.js";
+import { getCurrentMusicID } from "./app.js";
 
 // here we are going to load the imgs into disc-container
 const discContainer = document.querySelector('.disc-container');
 
 function loadImg() {
-    musicList.forEach(
+    // we have to clear the entire state
+    const imgsToDelete = document.querySelectorAll('.to-delete');
+    imgsToDelete.forEach(
         image => {
-            const discImg = document.createElement('img');
-            discImg.src = image.img;
-            discImg.alt = image.id;
-
-            discContainer.appendChild(discImg);
+            image.remove();
         }
-    )
+    );
+
+    const discImg = document.createElement('img');
+    discImg.classList.add('to-delete');
+    discImg.src = musicList[getCurrentMusicID()].img;
+    discImg.alt = musicList[getCurrentMusicID()].id;
+
+    discContainer.appendChild(discImg);
 }
+
+
 export {loadImg};

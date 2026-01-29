@@ -71,21 +71,8 @@ function prevMusic() {
     }
 }
 
-
-const discContainer = document.querySelector('.disc-container');
-
-function loadImg() {
-    // we have to clear the entire state
-    const imgsToDelete = document.querySelectorAll('.to-delete');
-    imgsToDelete.forEach(
-        image => {
-            image.remove();
-        }
-    );
-    const discImg = document.createElement('img');
-    discImg.classList.add('to-delete');
-    discImg.src = musicList[currentMusicID].img;
-    discImg.alt = musicList[currentMusicID].id;
-
-    discContainer.appendChild(discImg);
+function getCurrentMusicID() {
+    return currentMusicID;
 }
+
+export {getCurrentMusicID};
