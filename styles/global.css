@@ -16,10 +16,10 @@
     justify-content: center;
     align-items: center;
 
-    position: relative;
 }
 
 .tone-player {
+    position: relative;
     width: min(100%, 500px);
     height: 200px;
     background-color: var(--main-color);
